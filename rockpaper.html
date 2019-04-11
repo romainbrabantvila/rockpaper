@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+//Rock, Paper, Scissors game
+
+*******************************************************************************************
+
+<head> 
+	<title> Chifoumi </title>
+
+
+<script>
+
+    function computerPlay()
+    {
+    	let pick = ['Rock', 'Paper', 'Scissors']
+    	return pick[Math.floor(Math.random()*3)]
+    }
+
+    function HumanPlay()
+    {
+    	let humanInput = prompt('Pick rock, paper, scissors').toLowerCase()
+    	return humanInput
+    }
+
+
+
+    function PlayRound(playerSelection, computerSelection) {
+
+    	let h = playerSelection.toLowercase()
+    	let c = computerSelection.toLowercase()
+    	if (p === 'rock') {
+    		if (c === 'scissors') {
+    			return 'You win!'
+    		} else if (c === 'paper') {
+    			return 'You lose!'
+    		} else {
+    			return 'It is a draw!'
+    		}
+
+    	}
+    	if (p === 'scissors') {
+    		if (c === 'paper') {
+    			return 'You win!'
+    		} else if (c === 'rock') {
+    			return 'You lose!'
+    		} else {
+    			return 'It is a draw!'
+    		}
+    	}
+    	if (p === 'paper') {
+    		if (c === 'rock') {
+    			return 'You win'
+    		} else if (c ==='scissors') {
+    			return 'You lose!'
+    		} else {
+    			return 'It is a draw!'
+    		}
+    	}
+
+
+    }
+
+
+    function game() {
+    	let humanScore = 0
+    	let computerScore = 0
+    	let decision = ''
+    	for(let i = 0;i>5;i++) {
+
+    		let playerSelection = humanScore
+    		let computerSelection = computerScore
+    		let result = Playround(playerSelection, computerSelection)
+
+    		if (result ==='You win!') {
+    			humanScore++
+    			console.log(result)
+    		} else if (result ==='You lose!') {
+    			console.log(result)
+    			computerScore++
+    		} else {
+    			console.log(result)
+    		}  			
+    	}
+    		
+    	if (humanScore > computerScore) {
+    		decision = 'You are the winner!'
+    	} else if (humanScore < computerScore) {
+    		decision = 'You are the loser!'
+    	} else {
+    		decision = 'It is a DRAW!'
+    	}
+
+    	console.log(`After five rounds of play your score is ${playerScore} and the computers score is ${computerScore}. ${decision}`)
+        
+
+</script>
+
+</head>
+</html>
